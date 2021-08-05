@@ -11,6 +11,9 @@ $key-color:green;
 html {
     font-size: 62.5%;
     font-family: "Ubuntu Mono", sans-serif;
+    @media only screen and (max-width: 26.9375em) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -19,24 +22,66 @@ body {
     background-color: $background-color;
 }
 
+.header {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darken($color: $key-color, $amount: 10%);
+    padding: 0 5rem;
+    @media only screen and (max-width: 50em) {
+        height: 9rem;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__brand {
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    &__tool-box {
+        display: flex;
+        flex: 0 0 25%;
+        justify-content: space-between;
+        @media only screen and (max-width: 50em) {
+            flex: 0 0 40%;
+            flex-direction: column;
+            height: 5rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: $font-color;
+    }
+}
+
 .main-block {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media only screen and (max-width: 50em) {
+        width: 100vw;
+    }
     &__content {
         margin: 4rem 0;
+        padding: 2rem;
         &>* {
             margin: 2rem 0;
         }
+        @media only screen and (max-width: 29.25em) {
+            padding: 0;
+            width: 100%;
+        }
     }
     &__forms {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
     }
@@ -44,6 +89,11 @@ body {
         color: $key-color;
         font-weight: 300;
         font-size: 2rem;
+    }
+    &__subtitle {
+        color: $key-color;
+        font-size: 1.4rem;
+        font-weight: 200;
     }
 }
 
@@ -66,7 +116,6 @@ body {
     &:visited,
     &:active {
         border: none;
-        outline: none;
         font-family: inherit;
     }
     &-rounded {
@@ -77,5 +126,26 @@ body {
     &--green {
         background-color: $key-color;
         color: darken($color: $font-color, $amount: 20%);
+    }
+}
+
+.form {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    &--block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__input {
+        border: none;
+        background: lighten($color: grey, $amount: 30%);
+        color: $key-color;
+        height: 40px;
+        padding-left: 3rem;
+        margin: 2rem 0;
+        border-radius: 100px;
     }
 }
