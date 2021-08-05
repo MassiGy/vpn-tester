@@ -40,7 +40,7 @@ body {
     }
     &__tool-box {
         display: flex;
-        flex: 0 0 25%;
+        flex: 0 0 28%;
         justify-content: space-between;
         @media only screen and (max-width: 50em) {
             flex: 0 0 40%;
@@ -65,9 +65,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media only screen and (max-width: 50em) {
-        width: 100vw;
-    }
+    width: 100vw;
     &__content {
         margin: 4rem 0;
         padding: 2rem;
@@ -80,10 +78,13 @@ body {
         }
     }
     &__forms {
-        width: 80%;
+        width: 50%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        @media only screen and (max-width: 31em) {
+            width: 100%;
+        }
     }
     &__heading {
         color: $key-color;
