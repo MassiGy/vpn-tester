@@ -196,6 +196,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: inherit;
 }
 
 .form--block {
@@ -212,6 +213,7 @@ body {
 }
 
 .form__input {
+  font-size: inherit;
   border: none;
   background: #cdcdcd;
   color: green;

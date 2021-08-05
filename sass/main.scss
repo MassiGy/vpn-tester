@@ -135,12 +135,14 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    font-size: inherit;
     &--block {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
     &__input {
+        font-size: inherit;
         border: none;
         background: lighten($color: grey, $amount: 30%);
         color: $key-color;
