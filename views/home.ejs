@@ -1,0 +1,96 @@
+<%- include('../partials/__head.ejs')  %>
+
+    <body>
+
+        <%- include('../partials/__header')  %>
+
+
+            <section class="main-block">
+                <div class="main-block__content">
+                    <h4 class="main-block__heading">
+                        $_here will be desplayed you vpn test resaults.
+                    </h4>
+                    <ul class="main-block__list list">
+                        <li class="list__item details">
+                            <strong class="details__key">$>_is vpn enabled:</strong>
+                            <% if(response.data){ %>
+                                <%= response.data.security.is_vpn  %>.
+                                    <% }else{   %>
+                                        test to get resaults.
+                                        <% } %>
+                        </li>
+                        <li class="list__item details">
+                            <strong class="details__key">$>_current ip address:</strong>
+                            <% if(response.data){ %>
+                                <%= response.data.ip_address  %>.
+                                    <% }else{ %>
+                                        test to get resaults.
+                                        <% } %>
+
+
+                        </li>
+                        <li class="list__item details">
+                            <strong class="details__key">$>_current geo location:</strong>
+                            <% if(response.data){ %>
+                                <%= response.data.country  %>.
+                                    <% }else{ %>
+                                        test to get resaults.
+                                        <% } %>
+
+
+                        </li>
+                        <li class="list__item details">
+                            <strong class="details__key">$>_current geo location code:</strong>
+                            <% if(response.data){ %>
+                                <%= response.data.country_code  %>.
+                                    <% }else{ %>
+                                        test to get resaults.
+                                        <% } %>
+
+
+                        </li>
+                        <li class="list__item details">
+                            <strong class="details__key">$>_current address continent:</strong>
+                            <% if(response.data){ %>
+                                <%= response.data.continent  %>.
+                                    <% }else{ %>
+                                        test to get resaults.
+                                        <% } %>
+
+
+                        </li>
+                        <li class="list__item details">
+                            <strong class="details__key">$>_current geo longitude:</strong>
+                            <% if(response.data){ %>
+                                <%= response.data.longitude  %>.
+                                    <% }else{ %>
+                                        test to get resaults.
+                                        <% } %>
+
+
+                        </li>
+                        <li class="list__item details">
+                            <strong class="details__key">$>_current geo latitude:</strong>
+                            <% if(response.data){ %>
+                                <%= response.data.latitude %>.
+                                    <% }else{ %>
+                                        test to get resaults.
+                                        <% } %>
+
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-block__forms">
+                    <Form class="main-block__form form form--inline" method="POST" action="/test">
+                        <button class="btn btn-rounded btn--green form__btn">Test my Vpn</button>
+                    </Form>
+                    <Form class="main-block__form form" method="POST" action="/reset">
+                        <button class="btn btn-rounded form__btn">Reset  Test</button>
+                    </Form>
+                </div>
+            </section>
+
+    </body>
+
+    </html>
