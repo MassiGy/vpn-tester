@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+$background-color:#000;
+$font-color:#FFF;
+$key-color:green;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Ubuntu Mono", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    color: $font-color;
+    background-color: $background-color;
+}
+
+.main-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__content {
+        margin: 4rem 0;
+        &>* {
+            margin: 2rem 0;
+        }
+    }
+    &__forms {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__heading {
+        color: $key-color;
+        font-weight: 300;
+        font-size: 2rem;
+    }
+}
+
+.list {
+    list-style: none;
+     :not(:last-child) {
+        margin-bottom: .5rem;
+    }
+}
+
+.details {
+    &__key {
+        color: $key-color;
+        padding: 1rem;
+    }
+}
+
+.btn {
+    &,
+    &:visited,
+    &:active {
+        border: none;
+        outline: none;
+        font-family: inherit;
+    }
+    &-rounded {
+        padding: 2rem;
+        font-size: 1.8rem;
+        border-radius: 100px;
+    }
+    &--green {
+        background-color: $key-color;
+        color: darken($color: $font-color, $amount: 20%);
+    }
+}
