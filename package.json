@@ -1,20 +1,34 @@
 {
-  "name": "apiScan",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "dotenv": "^10.0.0",
-    "ejs": "^3.1.6",
-    "ejs-mate": "^3.0.0",
-    "express": "^4.17.1",
-    "path": "^0.12.7"
-  }
+    "name": "apiscan",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "set-up:css": "rimraf ./css/style.css",
+        "prefix:css": "postcss --use autoprefixer -b 'last 4 versions' ./css/main.css -o ./css/style.prefixed.css",
+        "compress:css": "node-sass ./css/style.prefixed.css ./css/style.css --output-style compressed",
+        "clean:css": "rimraf  ./css/main.concat.css ./css/style.prefixed.css ./css/main.css ",
+        "build:css": "npm-run-all set-up:css prefix:css compress:css clean:css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.3.1",
+        "concat": "^1.0.3",
+        "node-sass": "^6.0.1",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.3.5",
+        "rimraf": "^3.0.2",
+        "postcss-cli": "^8.3.1"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "dotenv": "^10.0.0",
+        "ejs": "^3.1.6",
+        "ejs-mate": "^3.0.0",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.12",
+        "path": "^0.12.7"
+    }
 }
