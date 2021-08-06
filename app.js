@@ -5,15 +5,9 @@ const ejs_mate = require('ejs-mate');
 const ejs = require('ejs');
 const path = require('path');
 const axios = require('axios');
-const { stringify } = require('postcss');
-const { json } = require('express');
 const mailjet = require('node-mailjet').connect(process.env.apiConnectFirstArg, process.env.apiConnectSecondArg)
 const port = process.env.PORT || 3000;
 const option = { headers: { accept: 'application/json' } };
-var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-};
 
 
 app.use(express.json());
@@ -23,6 +17,9 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
 app.use('/css', express.static('css'));
 app.use('/partials', express.static('partials'));
+app.use('/scripts', express.static('scripts'))
+
+
 
 app.get('/', (req, res) => {
     let response = {};
@@ -35,16 +32,6 @@ app.get('/home', (req, res) => {
 })
 
 
-app.post('/test', (req, res) => {
-    axios.get(`https://ipgeolocation.abstractapi.com/v1/?api_key=${process.env.apiKey}`, option)
-        .then((response) => {
-            res.render('home', { response })
-        })
-        .catch(err => {
-            console.log(err.message);
-        })
-
-})
 
 app.post('/reset', (req, res) => {
     res.redirect('/');
