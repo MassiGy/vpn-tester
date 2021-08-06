@@ -36,6 +36,7 @@ const vpnTestProcess = () => {
             item_key.classList.add('details__key');
             item_key.append("$>_" + "is_vpn" + " :")
             const item = document.createElement('li');
+            item.classList.add('list__item')
             item.append(item_key)
             item.append(response.data.security.is_vpn)
             content_block.append(item)
