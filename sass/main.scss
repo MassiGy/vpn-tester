@@ -65,12 +65,12 @@ body {
             width: 100%;
         }
     }
-    &__forms {
-        width: 50%;
+    &__btns {
+        width: 45%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        @media only screen and (max-width: 31em) {
+        @media only screen and (max-width: 35em) {
             width: 100%;
         }
     }
@@ -112,12 +112,4 @@ body {
         background-color: $key-color;
         color: darken($color: $font-color, $amount: 20%);
     }
-}
-
-.form {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    font-size: inherit;
 }

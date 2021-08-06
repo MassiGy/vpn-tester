@@ -98,8 +98,8 @@ body {
   }
 }
 
-.main-block__forms {
-  width: 50%;
+.main-block__btns {
+  width: 45%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,8 +109,8 @@ body {
           justify-content: space-between;
 }
 
-@media only screen and (max-width: 31em) {
-  .main-block__forms {
+@media only screen and (max-width: 35em) {
+  .main-block__btns {
     width: 100%;
   }
 }
@@ -153,16 +153,4 @@ body {
 .btn--green {
   background-color: green;
   color: #cccccc;
-}
-
-.form {
-  width: 80%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: inherit;
 }
