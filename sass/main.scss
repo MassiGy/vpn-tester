@@ -71,7 +71,8 @@ body {
         display: flex;
         justify-content: space-between;
         @media only screen and (max-width: 35em) {
-            width: 100%;
+            width: 80%;
+            margin: 0 auto;
         }
     }
     &__heading {
