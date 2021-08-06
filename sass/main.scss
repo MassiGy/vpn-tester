@@ -100,15 +100,16 @@ body {
 
 .list {
     list-style: none;
-     :not(:last-child) {
-        margin-bottom: .5rem;
+    &__item {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
     }
 }
 
 .details {
     &__key {
         color: $key-color;
-        padding: 1rem;
     }
 }
 
