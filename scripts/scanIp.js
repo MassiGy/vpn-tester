@@ -24,7 +24,7 @@ const elDestroyer = (parentNode) => {
 }
 
 const vpnTestProcess = () => {
-    axios.get(`https://ipgeolocation.abstractapi.com/v1/?api_key=157b238cdaeb49b4b75675c5d012003a`, option)
+    axios.get(`https://ipgeolocation.abstractapi.com/v1/?api_key=377661b0410c4ce491c68fe03830c405`, option)
         .then((response) => {
 
             elDestroyer(content_block);
