@@ -17,7 +17,7 @@ func main(){
     http.Handle("/views/", http.StripPrefix("/views/", viewsFileServer))
 
     publicFileServer := http.FileServer(http.Dir("./public"))
-    http.Handle("/", publicFileServer)
+    http.Handle("/robots.txt", publicFileServer)
 
 
     scriptsFileServer := http.FileServer(http.Dir("./scripts"))
